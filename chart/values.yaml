@@ -21,6 +21,8 @@ service:
 ingress:
   domain: ""
   tlsname: ""
+  #issuer: letsencrypt-http
+  clusterissuer: letsencrypt-prod
 
 resources: {}
 
