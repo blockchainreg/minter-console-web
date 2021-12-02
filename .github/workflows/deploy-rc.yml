@@ -34,10 +34,9 @@ jobs:
       - name: build and push docker image
         uses: opspresso/action-docker@v0.2.13
         env:
-          USERNAME: ${{ secrets.MINTER_REGISTRY_USERNAME }}
-          PASSWORD: ${{ secrets.MINTER_REGISTRY_PASSWORD }}
-          REGISTRY: "registry.minter.network"
-          IMAGE_NAME: ${{ env.PROJECT_NAME }}
+          USERNAME: ${{ secrets.DOCKER_HUB_USER }}
+          PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          IMAGE_NAME: "minterteam/console-web"
           LATEST: "true"
           TAG_NAME: ${{ github.sha }}
           DOCKERFILE: ".docker/Dockerfile"
